@@ -33,7 +33,7 @@ def CreateTrackObject(url, title, include_container=False):
 					PartObject(key=Callback(PlayAudio, url=url, ext='mp3'))
 				],
 				container = Container.MP3,
-				#bitrate = 96,
+				bitrate = 40,
 				audio_codec = AudioCodec.MP3,
 				audio_channels = 2
 			)
