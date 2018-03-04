@@ -2,7 +2,7 @@ ART = 'artlogo.jpg'
 ICON = 'icon-default.jpg'
 
 NAME = 'Bay FM 99.9FM'
-STREAM_URL = 'http://mega2.radioserver.co.uk:8226/'
+STREAM_URL = 'http://2bay.amrapstream.com:8000/stream'
 
 ####################################################################################################
 def Start():
@@ -30,11 +30,11 @@ def CreateTrackObject(url, title, include_container=False):
 		items = [
 			MediaObject(
 				parts = [
-					PartObject(key=Callback(PlayAudio, url=url, ext='mp3'))
+					PartObject(key=Callback(PlayAudio, url=url, ext='aac'))
 				],
-				container = Container.MP3,
-				bitrate = 40,
-				audio_codec = AudioCodec.MP3,
+				container = Container.aac,
+				bitrate = 128,
+				audio_codec = AudioCodec.acc,
 				audio_channels = 2
 			)
 		]
