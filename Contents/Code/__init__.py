@@ -32,9 +32,8 @@ def CreateTrackObject(url, title, include_container=False):
 				parts = [
 					PartObject(key=Callback(PlayAudio, url=url, ext='aac'))
 				],
-				container = Container.aac,
-				bitrate = 128,
-				audio_codec = AudioCodec.acc,
+				container = Container.MP4,
+				audio_codec = AudioCodec.AAC,
 				audio_channels = 2
 			)
 		]
