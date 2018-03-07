@@ -1,19 +1,14 @@
-####################################################################################################
-
 ART = 'artlogo.jpg'
 ICON = 'icon-default.jpg'
-
 NAME = 'Bay FM 99.9FM'
 STREAM_URL = 'http://2bay.amrapstream.com:8000/stream'
 
-####################################################################################################
 def Start():
 
 	ObjectContainer.art = R(ART)
 	ObjectContainer.title1 = NAME
 	TrackObject.thumb = R(ICON)
 
-####################################################################################################     
 @handler('/music/BayFM999', NAME, thumb=ICON, art=ART)
 def MainMenu():
 
@@ -22,7 +17,6 @@ def MainMenu():
 
 	return oc
 
-####################################################################################################
 def CreateTrackObject(url, title, include_container=False):
 
 	track_object = TrackObject(
@@ -46,7 +40,6 @@ def CreateTrackObject(url, title, include_container=False):
 	else:
 		return track_object
 
-####################################################################################################
 def PlayAudio(url):
 
 	return Redirect(url)
